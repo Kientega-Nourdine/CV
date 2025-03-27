@@ -1,133 +1,603 @@
 /********************** global design ***************************/
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --color-dark: #000; --color-white: #fff; --white-smoke: #f0f0f0; }
-body { background: var(--white-smoke); }
-.container { width: 825px; background: #fff; margin: 4rem auto; padding: 0 2rem; box-shadow: 0 0 3rem rgba(0, 0, 0, .2); }
-.cv { width: 100%; height: 100%; display: flex; gap: 2.5rem; }
-.french, .english { display: none; }
-.french.active { display: block; }
-.english.active { display: block; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark: #000;
+    --color-white: #fff;
+    --white-smoke: #f0f0f0;
+}
+
+body {
+    background: var(--white-smoke);
+}
+
+.container {
+    width: 825px;
+    background: #fff;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .2);
+}
+
+.cv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.french,
+.english {
+    display: none;
+}
+
+.french.active {
+    display: block;
+}
+
+.english.active {
+    display: block;
+}
 
 /********************** toggle btn ***************************/
-.cv-container { position: relative; }
-.slider { width: 74px; height: 28px; position: absolute; right: 344px; top: 22px; background: #000; color: #fff; border-radius: 15px; }
-.slider .toggle { position: relative; }
-.slider .toggle .lang { width: 100%; padding: 5px 12px; display: flex; justify-content: space-between; }
-.slider .toggle .circle { width: 37px; height: 23px; position: absolute; top: 3px; left: 2px; background: #fff; cursor: pointer; border-radius: 15px; transition: all .8s ease; }
-.slider .toggle .circle.active { left: 35px; }
+.cv-container {
+    position: relative;
+}
+
+.slider {
+    width: 74px;
+    height: 28px;
+    position: absolute;
+    right: 344px;
+    top: 22px;
+    background: #000;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.slider .toggle {
+    position: relative;
+}
+
+.slider .toggle .lang {
+    width: 100%;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .toggle .circle {
+    width: 37px;
+    height: 23px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all .8s ease;
+}
+
+.slider .toggle .circle.active {
+    left: 35px;
+}
 
 /********************** left slide ***************************/
-.cv .left-slide { width: 35%; background: #f4f4f4; }
+.cv .left-slide {
+    width: 35%;
+    background: #f4f4f4;
+}
 
 /********************** Presentation desgin ***************************/
-.cv .left-slide .presentation { width: 100%; background: var(--color-dark); text-align: center; padding-top: 1.5rem; border-bottom-left-radius: 125px; border-bottom-right-radius: 125px; }
-.cv .left-slide .presentation .name { color: var(--color-white); }
-.cv .left-slide .presentation .proffession { color: #fff; font-size: 16px; }
-.cv .left-slide .presentation .profil { width: 100%; display: flex; align-items: center; justify-content: center; padding: 8px; }
-.cv .left-slide .presentation .profil div { width: 220px; height: 215px; border: 7px solid #fff; border-radius: 50%; }
-.cv .left-slide .presentation .profil img { width: 100%; height: 100%; border-radius: 50%; }
+.cv .left-slide .presentation {
+    width: 100%;
+    background: var(--color-dark);
+    text-align: center;
+    padding-top: 1.5rem;
+    border-bottom-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+}
+
+.cv .left-slide .presentation .name {
+    color: var(--color-white);
+}
+
+.cv .left-slide .presentation .proffession {
+    color: #fff;
+    font-size: 16px;
+}
+
+.cv .left-slide .presentation .profil {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.cv .left-slide .presentation .profil div {
+    width: 220px;
+    height: 215px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+}
+
+.cv .left-slide .presentation .profil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 
 /********************** Contact desgin ***************************/
-.cv .left-slide .contact { width: 100%; text-align: center; margin: 1rem 0; padding: 0 5px; }
-.cv .left-slide .title { width: 100%; display: flex; align-items: center; justify-content: center; margin: 1rem 0 0; }
-.cv .left-slide .title .icon { width: 20px; height: 20px; margin-right: 10px; background: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.cv .left-slide .title .icon svg { width: 75%; height: 75%; fill: #fff; }
-.cv .left-slide .title img { width: 20px; height: 20px; margin-right: 5px; }
-.cv .left-slide .title img.alone { width: 16px; height: 16px; margin-top: 2px; margin-right: 0px; }
-.cv .left-slide .contact .items { width: 100%; }
-.cv .left-slide .contact .items .item { display: flex; align-items: center; padding-bottom: 5px; gap: 5px;  }
-.cv .left-slide .contact .items .item img { width: 12px; height: 12px; }
+.cv .left-slide .contact {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0 5px;
+}
+
+.cv .left-slide .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0;
+}
+
+.cv .left-slide .title .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv .left-slide .title .icon svg {
+    width: 75%;
+    height: 75%;
+    fill: #fff;
+}
+
+.cv .left-slide .title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.cv .left-slide .title img.alone {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-right: 0px;
+}
+
+.cv .left-slide .contact .items {
+    width: 100%;
+}
+
+.cv .left-slide .contact .items .item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    gap: 5px;
+}
+
+.cv .left-slide .contact .items .item img {
+    width: 12px;
+    height: 12px;
+}
 
 /********************** Learnnig desgin ***************************/
-.cv .left-slide .learnning { width: 90%; height: calc(100% - 535px); border: 1px solid; margin: 0 auto; padding: 3.75rem 1rem 0; border-top-left-radius: 125px; border-top-right-radius: 125px; color: #fff; background: #000; }
-.cv .left-slide .learnning .title .icon { background: #f1f1f1; }
-.cv .left-slide .learnning .title .icon svg { fill: #000; }
-.cv .left-slide .learnning .items { width: 100%; margin: 0; }
-.cv .left-slide .learnning .items .item { width: 100%; margin: 10px 0; }
-.cv .left-slide .learnning .items .item h4 { font-weight: bold; margin-bottom: 6px; }
-.cv .left-slide .learnning .items .item div { font-size: 14px; color: whitesmoke; margin-bottom: 3px; } 
+.cv .left-slide .learnning {
+    width: 90%;
+    height: calc(100% - 535px);
+    border: 1px solid;
+    margin: 0 auto;
+    padding: 3.75rem 1rem 0;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    color: #fff;
+    background: #000;
+}
+
+.cv .left-slide .learnning .title .icon {
+    background: #f1f1f1;
+}
+
+.cv .left-slide .learnning .title .icon svg {
+    fill: #000;
+}
+
+.cv .left-slide .learnning .items {
+    width: 100%;
+    margin: 0;
+}
+
+.cv .left-slide .learnning .items .item {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.cv .left-slide .learnning .items .item h4 {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.cv .left-slide .learnning .items .item div {
+    font-size: 14px;
+    color: whitesmoke;
+    margin-bottom: 3px;
+}
 
 /********************** Exprerience, Reference desgin, language and hobbies desgin ***************************/
-.cv .left-slide .learnning :where(.education, .reference, .language, .hobbies) { margin: 1rem 0; }
+.cv .left-slide .learnning :where(.education, .reference, .language, .hobbies) {
+    margin: 1rem 0;
+}
 
-.cv .left-slide .learnning :where(.language, .hobbies) .items { padding-left: 1rem; }
-.cv .left-slide .learnning .hobbies .items { padding-bottom: 1.5rem; }
+.cv .left-slide .learnning :where(.language, .hobbies) .items {
+    padding-left: 1rem;
+}
 
-/********************** Rigth slide ***************************/ 
-.cv .right-slide { width: 100%; padding: 1.5rem 0 2rem; }
-.cv .right-slide .title { width: 100%; display: flex; align-items: center; justify-content: flex-start; margin-bottom: .5rem; }
-.cv .right-slide .title .icon { width: 20px; height: 20px; margin-right: 10px; background: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.cv .right-slide .title .icon svg { width: 75%; height: 75%; fill: #fff; }
+.cv .left-slide .learnning .hobbies .items {
+    padding-bottom: 1.5rem;
+}
 
-.cv .right-slide .title img { width: 20px; height: 20px; margin-right: 5px; }
-.cv .right-slide .title img.alone { width: 16px; height: 16px; margin-top: 2px; margin-right: 10px; }
+/********************** Rigth slide ***************************/
+.cv .right-slide {
+    width: 100%;
+    padding: 2.5rem 0 2rem;
+}
 
-.cv .right-slide :where(.about, .experience, .skills, .reference) { width: 100%; }
+.cv .right-slide .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: .5rem;
+}
+
+.cv .right-slide .title .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv .right-slide .title .icon svg {
+    width: 75%;
+    height: 75%;
+    fill: #fff;
+}
+
+.cv .right-slide .title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.cv .right-slide .title img.alone {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+.cv .right-slide :where(.about, .experience, .skills, .online-profile) {
+    width: 100%;
+}
 
 /********************** About desgin ***************************/
-.cv .right-slide .about .name { font-size: 1.1rem; font-weight: bold; }
+.cv .right-slide .about .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 
 /********************** Experience desgin ***************************/
-.cv .right-slide .experience { width: 100%; }
-.cv .right-slide .experience .items { width: 100%; }
-.cv .right-slide .experience .items .item { width: 100%; margin-bottom: 1rem; }
-.cv .right-slide .experience .items .item .domain { width: 100%; }
-.cv .right-slide .experience .items .item .domain .status { text-decoration: underline; }
-.cv .right-slide .experience .items .item .domain .duration { font-weight: bold; margin: 2px 0; }
-.cv .right-slide .experience .items .item .description { margin-bottom: .5rem; }
-.cv .right-slide .experience .items .item .description span { font-weight: bold; margin: 2px 0; }
-.cv .right-slide .experience .items .item .keyword { font-weight: bold; }
+.cv .right-slide .experience {
+    width: 100%;
+}
+
+.cv .right-slide .experience .items {
+    width: 100%;
+}
+
+.cv .right-slide .experience .items .item {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.cv .right-slide .experience .items .item .domain {
+    width: 100%;
+}
+
+.cv .right-slide .experience .items .item .domain .status {
+    text-decoration: underline;
+}
+
+.cv .right-slide .experience .items .item .domain .duration {
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.cv .right-slide .experience .items .item .description {
+    margin-bottom: .5rem;
+}
+
+.cv .right-slide .experience .items .item .description span {
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.cv .right-slide .experience .items .item .keyword {
+    font-weight: bold;
+}
 
 /********************** Skills desgin ***************************/
-.cv .right-slide .skills { width: 100%; }
-.cv .right-slide .skills .main_skills, .add_skills { width: fit-content; border-bottom: 2px solid #000; padding-bottom: 0px; margin-bottom: .5rem; }
-.cv .right-slide .skills .items { width: 100%; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; margin-bottom: 1.2rem; }
-.cv .right-slide .skills .items:last-child { margin-bottom: 0; }
-.cv .right-slide .skills .items .item { width: fit-content; text-align: center; background: #f4f4f4; border-radius: 10px; padding: 5px; }
+.cv .right-slide .skills {
+    width: 100%;
+}
 
-.cv .right-slide .skills .items .item img {  width: 40px; height: 40px; margin-top: 5px; }
-.cv .right-slide .skills .items .item .progress_bar { width: 40%; height: 5px; background: #d5d4d4; border-radius: 10px;  }
-.cv .right-slide .skills .items .item .bar { width: 0%; height: 100%; background: #000; border-radius: 10px; }
+.cv .right-slide .skills .main_skills,
+.add_skills {
+    width: fit-content;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0px;
+    margin-bottom: .5rem;
+}
+
+.cv .right-slide .skills .items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 20px;
+    /* justify-content: space-between; */
+    margin-bottom: 1.2rem;
+}
+
+.cv .right-slide .skills .items:last-child {
+    margin-bottom: 0;
+}
+
+.cv .right-slide .skills .items .item {
+    width: fit-content;
+    text-align: center;
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.cv .right-slide .skills .items .item img {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.cv .right-slide .skills .items .item .progress_bar {
+    width: 40%;
+    height: 5px;
+    background: #d5d4d4;
+    border-radius: 10px;
+}
+
+.cv .right-slide .skills .items .item .bar {
+    width: 0%;
+    height: 100%;
+    background: #000;
+    border-radius: 10px;
+}
 
 /********************** Skills language percentage desgin ***************************/
-.cv .right-slide .skills .items .item .bar.php { width: 55%; }
-.cv .right-slide .skills .items .item .bar.laravel { width: 45%; }
-.cv .right-slide .skills .items .item .bar.docker { width: 10%; }
-.cv .right-slide .skills .items .item .bar.firebase { width: 10%; }  
-.cv .right-slide .skills .items .item .bar.word { width: 45%; }  
-.cv .right-slide .skills .items .item .bar.react_native { width: 45%; }  
+.cv .right-slide .skills .items .item .bar.php {
+    width: 55%;
+}
+
+.cv .right-slide .skills .items .item .bar.laravel {
+    width: 45%;
+}
+
+.cv .right-slide .skills .items .item .bar.docker {
+    width: 10%;
+}
+
+.cv .right-slide .skills .items .item .bar.firebase {
+    width: 10%;
+}
+
+.cv .right-slide .skills .items .item .bar.word {
+    width: 45%;
+}
+
+.cv .right-slide .skills .items .item .bar.react_native {
+    width: 45%;
+}
 
 /********************** Reference desgin ***************************/
-.cv .right-slide .reference { margin-top: 1rem; }
-.cv .right-slide .reference .items { display: flex; justify-content: space-around; }
-.cv .right-slide .reference .items .item { margin: 1rem 0; }
-.cv .right-slide .reference .items .item .name { letter-spacing: .05rem; }
+.cv .right-slide .reference {
+    margin-top: 1rem;
+}
+
+.cv .right-slide .reference .items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cv .right-slide .reference .items .item {
+    margin: 1rem 0;
+}
+
+.cv .right-slide .reference .items .item .name {
+    letter-spacing: .05rem;
+}
 
 
 /********************** Certifications desgin ***************************/
-.cv .right-slide .certifications { width: 100%; display: none; }
-.cv .right-slide .certifications .platform { width: fit-content; border-bottom: 2px solid #000; padding-bottom: 0px; margin-bottom: .5rem; }
-.cv .right-slide .certifications .items { width: 100%; display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.2rem; }
-.cv .right-slide .certifications .items .item { width: fit-content; gap: 1.5rem; }
-.cv .right-slide .certifications .items .item .content .file { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.cv .right-slide .certifications {
+    width: 100%;
+    display: none;
+}
+
+.cv .right-slide .certifications .platform {
+    width: fit-content;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0px;
+    margin-bottom: .5rem;
+}
+
+.cv .right-slide .certifications .items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.cv .right-slide .certifications .items .item {
+    width: fit-content;
+    gap: 1.5rem;
+}
+
+.cv .right-slide .certifications .items .item .content .file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+
+
+
+
+
+
+/* Container for the section */
+.cv .right-slide .online-profile {
+    margin: 20px 0;
+    margin-top: 2.5rem;
+}
+
+/* Items container */
+.cv .right-slide .online-profile .items {
+    display: flex;
+    gap: 15px;
+    /* Space between items */
+    padding-top: 1rem;
+}
+
+/* Style for each item (link with icon and text) */
+.cv .right-slide .online-profile .items .item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+    border: .5px solid #999;
+}
+
+/* Icon inside the item */
+.cv .right-slide .online-profile .items .item .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+.cv .right-slide .online-profile .items .item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Name text inside the item */
+.cv .right-slide .online-profile .items .item .name {
+    /* font-size: 1rem;  Align font size with general font size for better consistency */
+    font-weight: 500;
+    color: #333;
+}
+
+/* Hover effect */
+.cv .right-slide .online-profile .items .item:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+
 
 /********************** Download desgin ***************************/
-.download { width: 100%; text-align: center;  margin: 3rem 0;}
-.download .btn { outline: none; padding: .5rem; border-radius: 5px; cursor: pointer; box-shadow: 0 0 2rem rgba(0, 0, 0, .3); transition: all .5s ease-in-out; }
-.download .btn:hover { transform: scale(1.1); box-shadow: none; background: #fff;}
+.download {
+    width: 100%;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.download .btn {
+    outline: none;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+    transition: all .5s ease-in-out;
+}
+
+.download .btn:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+    background: #fff;
+}
 
 /********************** Responsive desgin ***************************/
 @media screen and (max-width: 991px) {
-    .container { width: 95%; padding: 0 10px;}
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
 
-    .cv { flex-direction: column; }
-    .slider { right: -2px; top: -45px; }
-    .cv .left-slide,.cv .right-slide { width: 100%; }
-    .cv .left-slide .presentation { width: 70%; margin: 0 auto; }
-    .cv .left-slide .contact { width: fit-content; margin: 1rem auto; }
-    .cv .left-slide .learnning { width: 80%; text-align: center; }
-}
+    .cv {
+        flex-direction: column;
+    }
 
+    .slider {
+        right: -2px;
+        top: -45px;
+    }
+
+    .cv .left-slide,
+    .cv .right-slide {
+        width: 100%;
+    }
+
+    .cv .left-slide .presentation {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .cv .left-slide .contact {
+        width: fit-content;
+        margin: 1rem auto;
+    }
+
+    .cv .left-slide .learnning {
+        width: 80%;
+        text-align: center;
+    }
+}
